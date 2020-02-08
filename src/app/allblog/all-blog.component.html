@@ -1,0 +1,68 @@
+<main>
+    <section class="banner" style="margin-bottom: 50px">
+        <div class="banner-text">
+            <h2 style="">{{"blog-home."+"h2"|translate}}</h2>
+            <p style="">{{"blog-home."+"p"|translate}}
+            </p>
+        </div>
+    </section>
+    <div class="inner-wrapper">
+        <section class="categories" style="margin-bottom: 50px">
+            <div class="category-menu d-flex align-items-center justify-content-center mb-5">
+                <h2 class="category-title"><strong>{{"category"|translate}}:</strong></h2>
+                <div class="tags">
+                    <div class="tag-item">
+                        <a class="tag" >Company culture</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Employee engagement</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Employee recognition</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Leadership</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Employee motivation</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Hr tech</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Products</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Hr tech</a>
+                    </div>
+
+                    <div class="tag-item">
+                        <a class="tag">Products</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="blogs my-5" style="margin-bottom: 72px">
+            <div class="blog-flex row d-flex justify-content-start">
+                <div class="blog-item col-4" routerLink="" *ngFor="let blog of blogList">
+                    <div class="blog-cover" [routerLink]="['/blogs', blog.payload.doc.id]" >
+                        <img class="blog-image" src={{blog.payload.doc.data().imageUrl}}>
+                    </div>
+                    <h2 class="blog-title" [routerLink]="['/blogs', blog.payload.doc.id]" >{{this.dictionary.translate.currentLang==='EN'?blog.payload.doc.data().titleEn:blog.payload.doc.data().titleVi}}</h2>
+                    <p class="blog-time">{{ todayNumber | date}} by <img class="avatar" src="{{blog.payload.doc.data().avatar}}"> {{blog.payload.doc.data().author}}
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+

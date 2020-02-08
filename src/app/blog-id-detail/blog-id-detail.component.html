@@ -1,0 +1,15 @@
+
+<div class="container inner-wrapper">
+    <section class="banner" style="margin: 0 80px;margin-bottom: 72px">
+        <img class="blog-image" src="{{(blogDetail | async)?.imageUrl}}">
+    </section>
+    <section class="blog-detail" style="height: 100%; margin-bottom: 72px">
+<!--        <h2>{{ (blogDetail | async)?.title }}</h2>-->
+        <div [innerHTML]="this.dictionary.translate.currentLang==='EN'?(blogDetail | async)?.contentEn:(blogDetail | async)?.contentVi">
+        </div>
+    </section>
+
+</div>
+
+
+

@@ -1,0 +1,773 @@
+<header #head id="head">
+    <div class="container top">
+            <nav class="nav" >
+                <div class="nav-brand" id="myTopBrand">
+                    <a href="index.html">
+                        <img class="top-logo tim" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo-UpUpApp.png?alt=media&token=ce40f8cb-b5ac-4835-9b58-d585c6a66388" alt="">
+                    </a>
+                    <a href="index.html">
+                    <img class="top-logo trang" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo-UpUpApp-white.png?alt=media&token=d58b21c9-d38c-4fdc-bb58-db57babca594" alt="">
+                    </a>
+                </div>
+                <div class="menu-icons open" id="myTopMenu">
+                    <a class="icon" (click)="this.menuService.myFunction()">
+                        <i class="icon ion-md-menu">
+                        </i>
+                    </a>
+                </div>
+                <ul class="nav-list" id="myTopNav">
+                    <div class="menu-icons close">
+                        <a class="icon" (click)="this.menuService.myFunction()">
+                            <i class="icon ion-md-close">
+                            </i>
+                        </a>
+                    </div>
+                    <li class="nav-item">
+                        <a (click)="scroll(solutions)" class="nav-link current">{{"nav."+"1"| translate}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="scroll(features)" class="nav-link">{{"nav."+"2"| translate}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="scroll(customers)">{{"nav."+"3"| translate}}</a>
+                    </li>
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" [routerLink]="'/pricing'" >Pricing</a>-->
+<!--                    </li>-->
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink]="'/blogs'">{{"nav."+"4"| translate}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="scroll(end)"  class="nav-link">{{"nav."+"5"| translate}}</a>
+                    </li>
+                    <li class="nav-item cta">
+                        <a (click)="this.displayForm=true; this.menuService.myFunction()" class="btn eclipse small" >{{"nav."+"cta"| translate}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="translation d-inline-flex justify-content-center align-items-center">
+                            <div class="language-image">
+                                <div *ngIf="this.dictionary.translate.currentLang==='EN'">
+                                    <img class="flag" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Ftranslation%2FEN.png?alt=media&token=d4d9ce1b-d42e-4dd9-a3e7-728acf55eba2">
+                                </div>
+                                <div *ngIf="this.dictionary.translate.currentLang==='VI'">
+                                    <img class="flag" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Ftranslation%2FVN.png?alt=media&token=d4d9ce1b-d42e-4dd9-a3e7-728acf55eba2">
+                                </div>
+                                <!--                            <div *ngIf="langSelect.value==='VN'">-->
+    <!--                                <img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Ftranslation%2FVN.png?alt=media&token=d4d9ce1b-d42e-4dd9-a3e7-728acf55eba2">-->
+    <!--                            </div>-->
+                            </div>
+                            <select class="select-css-top mx-1" #langSelect (change)="this.dictionary.changeLang(langSelect.value)">
+                                <option *ngFor="let lang of this.dictionary.translate.getLangs()" [value]="lang" [selected]="lang === this.dictionary.translate.currentLang"> {{lang}} </option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+</header>
+
+
+<main>
+    <section class="hero">
+        <div class="hero-profile">
+            <div class="hero-profile-item-cta">
+                <h2 class="mb-1">{{ "hero."+"h2" | translate }}</h2>
+                <p class="mb-5">
+                    {{ "hero."+"p" | translate }}
+                </p>
+                <div class="cta">
+                    <a (click)="this.displayForm=true" class="btn eclipse" >{{"nav."+"cta"| translate}}</a>
+                    <!--              <a href="#" class="btn eclipse contrast">learn more</a>-->
+                </div>
+            </div>
+            <div class="hero-profile-item-image">
+                <img class="hero-image" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fhero-image.png?alt=media&token=93946d91-b75e-484c-8406-f1d2c764f140" alt="">
+            </div>
+        </div>
+
+    </section>
+    <!--  -->
+    <section class="we-work-with" style="margin-bottom: 156px">
+        <div class="inner-wrapper">
+            <div style="text-align: center;">
+                <p>{{ "work-with-p" | translate }}</p>
+            </div>
+
+            <div class="grid-row-box col-2" [ngClass]="changeClass()" id="renamedclass">
+                <div class="logo-container">
+                    <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fpttdigital.jpg?alt=media&token=1cb1c6a2-4ff2-4fe5-b908-785b9b8378ee" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square medium" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fjumpdigital.jpg?alt=media&token=5e882a8c-1317-4461-abc1-d2728b5e5333" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square bigest" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Ffixer.jpg?alt=media&token=c500d8bf-62db-4a90-9563-55a2cf6fb999" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square medium"  src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fshinhan.jpg?alt=media&token=30f6a091-4c0b-4a39-88a1-efb8ee6e5441" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square edify" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fedify.jpg?alt=media&token=9c44ba34-530b-4417-808e-e01f1abdbf8c" alt="">
+                </div>
+                <div class="logo-container">
+                    <img style="" class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fshelby-global.jpg?alt=media&token=f110e26d-86cd-4233-8b1b-f2f3cb8d07bc" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fhrdc.jpg?alt=media&token=9f144e19-89b2-4605-b92c-5779977dfa1a" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square big" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Futut.jpg?alt=media&token=37cef499-fd1a-4c29-add2-31b160a19f85" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square medium" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fsgbc.jpg?alt=media&token=bee78e29-0a1d-4a90-a618-7eff86f5735d" alt="">
+                </div>
+                <div class="logo-container">
+                    <img class="square" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fcooperation%2Fnayup.jpg?alt=media&token=366e71b8-1c8f-4f89-bfe7-bf99525d3198" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section class="employee-engagement" style="margin-bottom: 156px">
+        <div class="container" >
+            <div class="employee-engagement-video">
+                <h2 class="big-title" style="margin-bottom: 36px">
+                    {{"employee-engagement-h2"|translate}}
+                </h2>
+                <p style="padding: 0 15%;margin-bottom: 72px">
+                    {{"employee-engagement-p"|translate}}
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/eDmXkEGJ_WY" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section class="why-upupapp" #solutions id="solutions">
+        <div class="container" style="margin-bottom: 156px">
+            <div class="why-upupapp-container">
+                <h2 class="big-title">
+                    {{"why-upupapp-h2"|translate}}
+                </h2>
+                <div class="why-upupapp-flex row d-flex justify-content-center">
+                    <div class="why-upupapp-item col-sm-6 col-12">
+                        <div class="why-upupapp-circle">
+                            <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fboost-performance.png?alt=media&token=ca27129e-cdb9-46fa-8656-6b05f364c5b7" alt="">
+                        </div>
+                        <p class="why-upupapp-bold-text custom">
+                            {{"why-upupapp-item1."+"p1"|translate}}
+                        </p>
+                        <p>
+                            {{"why-upupapp-item1."+"p2"|translate}}
+                        </p>
+                    </div>
+                    <div class="why-upupapp-item col-sm-6 col-12">
+                        <div class="why-upupapp-circle">
+                            <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fretain-your-top.png?alt=media&token=3827b298-1ac3-4133-ace3-b306d90bc729" alt="">
+                        </div>
+                        <p class="why-upupapp-bold-text">
+                            {{"why-upupapp-item2."+"p1"|translate}}
+                        </p>
+                        <p>
+                            {{"why-upupapp-item2."+"p2"|translate}}
+                        </p>
+                    </div>
+                    <div class="why-upupapp-item col-sm-6 col-12">
+                    <div class="why-upupapp-circle">
+                        <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fenhance-your-workplace.png?alt=media&token=0aacb543-55e0-41e3-b1f4-a80e54660e2b" alt="">
+                    </div>
+                    <p class="why-upupapp-bold-text custom">
+                        {{"why-upupapp-item3."+"p1"|translate}}
+                    </p>
+                    <p align="justify">
+                        {{"why-upupapp-item3."+"p2"|translate}}
+                    </p>
+                    </div>
+                    <div class="why-upupapp-item col-sm-6 col-12">
+                    <div class="why-upupapp-circle">
+                        <img class="icon-gradient " src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fget-real-time.png?alt=media&token=43f42dc5-9b9d-4b0d-be8e-be5cf4794301" alt="">
+                    </div>
+                    <p class="why-upupapp-bold-text">
+                        {{"why-upupapp-item4."+"p1"|translate}}
+                    </p>
+                    <p>
+                        {{"why-upupapp-item4."+"p2"|translate}}
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="our-solutions">
+            <div class="container">
+                <div style="margin-bottom: 72px;"><h2 class="big-title" >{{"our-solutions-h2"|translate}}</h2></div>
+                <div class="our-solution-flex d-flex align-items-center justify-content-center row flex-column flex-lg-row justify-content-between">
+                    <div class="our-solution-item col-lg-3">
+                            <p class="our-solution-item-title">{{"our-solution-item1."+"p1"|translate}}</p>
+                            <p class="short-text custom-left">{{"our-solution-item1."+"p2"|translate}}</p>
+                            <div class="our-solution-circle d-flex justify-content-center align-items-center">
+                                <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fengage.png?alt=media&token=4ac633e4-a9a4-4140-8f0d-ee50c070200e" alt="">
+                            </div>
+                            <p class="long-text">
+                                {{"our-solution-item1."+"p3"|translate}}
+                            </p>
+                            <a href="#" class="our-solution-cta custom btn learn-more"><span>{{"solution-learn-more"|translate}}</span></a>
+                    </div>
+                    <div class="our-solution-item col-lg-3">
+                            <p class="our-solution-item-title">
+                                {{"our-solution-item2."+"p1"|translate}}
+                            </p>
+                            <p  class="short-text custom-mid">
+                                {{"our-solution-item2."+"p2"|translate}}
+                            </p>
+                            <div class="our-solution-circle ">
+                                <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fmotivate.png?alt=media&token=0657358d-f616-4745-b7e0-1e408289ca08" alt="">
+                            </div>
+                            <p class="long-text custom">
+                                {{"our-solution-item2."+"p3"|translate}}
+                            </p>
+                            <a href="#" class="our-solution-cta btn learn-more"><span>{{"solution-learn-more"|translate}}</span></a>
+                    </div>
+                    <div class="our-solution-item col-lg-3">
+                            <p class="our-solution-item-title">
+                                {{"our-solution-item3."+"p1"|translate}}
+                            </p>
+                            <p class="short-text custom-right">
+                                {{"our-solution-item3."+"p2"|translate}}
+                            </p>
+                            <div class="our-solution-circle">
+                                <img class="icon-gradient" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Freward.png?alt=media&token=f16991aa-d55a-4dbb-a374-d8f4d9ca7015" alt="">
+                            </div>
+                            <p class="long-text">
+                                {{"our-solution-item3."+"p3"|translate}}
+                            </p>
+                            <a href="#" class="our-solution-cta btn learn-more"><span>{{"solution-learn-more"|translate}}</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---->
+    <section class="all-in-one" style="margin-bottom: 170px;padding-bottom:18px;padding-top: 152px; background-color: rgba(0,77,128,0.1)" id="features" #features>
+        <div class="container">
+            <div class="all-in-one-performance text-center">
+                <h2 class="big-title" style="margin-bottom: 18px">{{"main-features."+"h2"|translate}}</h2>
+                <p class="short-text" style="margin-bottom: 72px">{{"main-features."+"p"|translate}}</p>
+                <div class="all-in-one-performance-flex d-flex justify-content-center row my-5 text-center">
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fperformance-management.png?alt=media&token=7933ad67-8b9c-40e4-9e14-fac38bef66d0" alt="">
+                        </div>
+                        <p class="short-text">{{"feature1"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fnewsfeed-system.png?alt=media&token=b6f9a67b-a74e-4965-ae53-5d08859cd6a8" alt="">
+                        </div>
+                        <p class="short-text">{{"feature2"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fmessaging-functions.png?alt=media&token=55c620c4-c287-412a-a6fd-5b36ce2ef0f5" alt="">
+                        </div>
+                        <p class="short-text">{{"feature3"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Ftask-management.png?alt=media&token=e1e05421-3325-46b0-9989-1d2c8b361564" alt="">
+                        </div>
+                        <p class="short-text">{{"feature4"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fleaderboard-points.png?alt=media&token=724333fa-2da7-48f9-bb43-60dfafe6588f" alt="">
+                        </div>
+                        <p class="short-text">{{"feature5"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fdigital-badges.png?alt=media&token=3e4b9324-471a-4050-a9ef-9acda8a1e1d1" alt="">
+                        </div>
+                        <p class="short-text">{{"feature6"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Frewards-recognition.png?alt=media&token=43cf60c1-5179-4e1d-93b0-d1d1b3955641" alt="">
+                        </div>
+                        <p class="short-text">{{"feature7"|translate}}</p>
+                    </div>
+                    <div class="all-in-one-performance-flex-item col-lg-3 col-md-3 col-sm-4 col-6">
+                        <div class="all-in-one-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Freport-analytics.png?alt=media&token=fd6f6a6c-2363-423e-b84e-e0df24c24fa1" alt="">
+                        </div>
+                        <p class="short-text">{{"feature8"|translate}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section class="products" style="margin-bottom: 120px">
+<!--        <div class="container">-->
+            <div class="grids d-flex flex-column text-center text-xl-left align-items-center justify-content-center pl-xl-5 pr-xl-5">
+                <div class="grid row d-flex align-items-center justify-content-center">
+                    <div class="grid-item-product left col-9 col-xl-4">
+                        <div class="grid-item-text ">
+                            <h2 class="para-title">{{"product-1."+"h2"|translate}}</h2>
+                            <div class="para-text">
+                                <p>
+                                    {{"product-1."+"p1"|translate}}
+                                </p>
+                                <br/>
+                                <p>
+                                    {{"product-1."+"p2"|translate}}
+                                </p>
+                            </div>
+                            <a class="tag-learn-more"> {{"solution-learn-more"|translate}}</a>
+                        </div>
+                    </div>
+                    <div class="grid-item-product col-11 col-xl-8">
+                        <div class="circle-phone right" >
+                            <img class="laptop-right" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fproducts%2FGoal%3A%20OKR.png?alt=media&token=21205731-0dbf-46d4-89a0-b4c88feb2b8f" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid row d-flex align-items-center justify-content-center">
+                    <div class="grid-item-product col-11 col-xl-8">
+                        <div class="circle-phone left" >
+                            <img class="laptop-left" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fproducts%2FCommunication.png?alt=media&token=ef9b834e-51c2-4a3d-8996-dbd3319bb1f2" alt="">
+                        </div>
+                    </div>
+                    <div class="grid-item-product right col-9 col-xl-4">
+                        <div class="grid-item-text">
+                            <h2 class="para-title">
+                                {{"product-2."+"h2"|translate}}
+                            </h2>
+                            <div class="para-text">
+                                <p>
+                                    {{"product-2."+"p1"|translate}}
+                                </p>
+                                <br>
+                                <p>
+                                    {{"product-2."+"p2"|translate}}
+
+                                </p>
+                            </div>
+                            <a class="tag-learn-more">{{"solution-learn-more"|translate}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid row d-flex align-items-center justify-content-center">
+                    <div class="grid-item-product left col-9 col-xl-4">
+                        <div class="grid-item-text ">
+                            <h2 class="para-title">
+                                {{"product-3."+"h2"|translate}}
+                            </h2>
+                            <div class="para-text">
+                                <p>
+                                    {{"product-3."+"p"|translate}}
+                                </p>
+                            </div>
+                            <a class="tag-learn-more">{{"solution-learn-more"|translate}}</a>
+                        </div>
+                    </div>
+                    <div class="grid-item-product col-11 col-xl-8">
+                        <div class="circle-phone right d-flex flex-column flex-xl-row align-items-center" >
+                            <img class="laptop-right" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fproducts%2FGamification.png?alt=media&token=df87224c-ed64-409b-b4a4-a9ca4db66cb4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="grid row d-flex align-items-center justify-content-center">
+                    <div class="grid-item-product col-11 col-xl-8">
+                        <div class="circle-phone left d-flex flex-column flex-xl-row align-items-center" >
+                            <img class="laptop-left" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fproducts%2FReward.png?alt=media&token=c5cab247-8f6e-4f6c-93f4-a66b097cf9df" alt="">
+                        </div>
+                    </div>
+                    <div class="grid-item-product right col-9 col-xl-4">
+                        <div class="grid-item-text">
+                            <h2 class="para-title">
+                                {{"product-4."+"h2"|translate}}
+                            </h2>
+                            <div class="para-text">
+                                <p>
+                                    {{"product-4."+"p1"|translate}}
+                                </p>
+                                <br>
+                                <p>
+                                    {{"product-4."+"p2"|translate}}
+
+                                </p>
+                            </div>
+                            <a class="tag-learn-more">{{"solution-learn-more"|translate}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid row d-flex align-items-center justify-content-center">
+                    <div class="grid-item-product left col-9 col-xl-4">
+                        <div class="grid-item-text ">
+                            <h2 class="para-title">
+                                {{"product-5."+"h2"|translate}}
+                            </h2>
+                            <div class="para-text">
+                                <p>
+                                    {{"product-5."+"p1"|translate}}
+                                </p>
+                                <br/>
+                                <p>
+                                    {{"product-5."+"p2"|translate}}
+                                </p>
+                            </div>
+                            <a class="tag-learn-more">{{"solution-learn-more"|translate}}</a>
+                        </div>
+                    </div>
+                    <div class="grid-item-product col-11 col-xl-8">
+                        <div class="circle-phone right d-flex flex-column flex-xl-row align-items-center" >
+                            <img class="laptop-right" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fproducts%2Fanalytics.png?alt=media&token=ebb24cdb-b4eb-4ce6-abf4-6eabe08bd88b" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        </div>-->
+    </section>
+    <!---->
+    <section class="cool-things" style="margin-bottom: 156px">
+        <div class="cool">
+            <h2 class="big-title pt-5" style="margin-bottom: 72px">{{"coolthings-h2"|translate}}</h2>
+            <div class="row text-center d-flex  justify-content-around" style="margin-bottom: 36px">
+                <div class="cool-thing-item col-6 col-sm-4">
+                    <div class="cool-circle">
+                        <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool1.png?alt=media&token=4a61f925-c472-467a-836b-ec336277ffeb" alt="">
+                    </div>
+                    <p class="cool-name">{{"cool1"|translate}}</p>
+                </div>
+                <div class="cool-thing-item col-6 col-sm-4">
+                    <div class="cool-circle">
+                        <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool2.png?alt=media&token=a03ad52f-083d-4954-b13d-83db732f93fa" alt="">
+                    </div>
+                    <p class="cool-name">{{"cool2"|translate}}</p>
+                </div>
+                <div class="cool-thing-item col-6 col-sm-4 ">
+                    <div class="cool-circle">
+                        <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool3.png?alt=media&token=0d231c2c-f2fb-4b67-b101-ea24ed94810a" alt="">
+                    </div>
+                    <p class="cool-name">{{"cool3"|translate}}</p>
+                </div>
+                <div class="cool-thing-item col-6 col-sm-4">
+                        <div class="cool-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool4.png?alt=media&token=0df1c080-1656-4bf1-baaf-020fda3cafb1" alt="">
+                        </div>
+                        <p class="cool-name">{{"cool4"|translate}}</p>
+                    </div>
+                <div class="cool-thing-item col-6 col-sm-4 ">
+                        <div class="cool-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool5.png?alt=media&token=1312d960-998d-4b8a-ae18-dbbc9745ab1a" alt="">
+                        </div>
+                        <p class="cool-name">{{"cool5"|translate}}</p>
+                    </div>
+                <div class="cool-thing-item col-6 col-sm-4">
+                        <div class="cool-circle">
+                            <img class="all-in-one-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fcool6.png?alt=media&token=d7c50263-af1a-4ba4-afc2-b0c3600ee39f" alt="">
+                        </div>
+                        <p class="cool-name">{{"cool6"|translate}}</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="safe-secure" style="margin-bottom: 156px; padding: 0 2rem">
+        <h2 class="big-title" style="margin-bottom: 36px">{{"safe-h2"|translate}}</h2>
+        <div class="safe-secure-flex row d-flex justify-content-center align-items-center">
+            <div class="safe-secure-item-image col-md-6 col-12">
+                <img class="safe-secure-image" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fsecurity.jpg?alt=media&token=ea62a600-dd4b-47ed-88d2-b97f7f9217e5" alt="">
+            </div>
+            <div class="safe-secure-item-text col-md-6 col-12">
+                <div class="safe-secure-para">
+                    <p>
+                        {{"safe-p1"|translate}} 
+                    </p>
+                    <br/>
+                    <p>
+                        {{"safe-p2"|translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section class="testimonials" id="customers" #customers style="margin-bottom: 156px">
+        <div class="container">
+            <div class="what-customer-say">
+                <h2 class="big-title" style="margin-bottom: 72px" >{{"testimonials-h2"|translate}}</h2>
+                <div class="customer-feedback row d-flex justify-content-center align-items-center">
+                    <div class="video text-center col-9 col-xl-6">
+                        <iframe height="100%" width="100%" [src]='sanitizer.bypassSecurityTrustResourceUrl(testimonial.src)' frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="text-feedback d-flex flex-column flex-xl-row col-9 col-xl-6">
+                        <div class="feedback-content text-center text-xl-left px-5">
+                            <p style="color: #3a3a3a; font-size:20pt;font-weight: bold; line-height: 25pt">{{testimonial.title | translate}}</p>
+                            <br/>
+                            <p> {{testimonial.feedback | translate}} </p>
+                            <br>
+                            <p style=" font-style: italic"> {{testimonial.author | translate}} </p>
+
+                        </div>
+                        <div class="row feedback-switch d-flex flex-xl-column justify-content-center align-items-center">
+                            <div class="indicate" (click)="changeTestimonialVideo(0);"></div>
+                            <div class="indicate" (click)="changeTestimonialVideo(1);"></div>
+                            <div class="indicate" (click)="changeTestimonialVideo(2);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-resources" style="margin-bottom: 120px; padding: 32px 0 ; background-color: rgba(0,77,128,0.1);">
+        <div class="container">
+            <div class="features-flex text-center">
+                <h2 class="big-title" style="margin-bottom: 18px">{{"resources."+"h2"|translate}}</h2>
+                <p style="margin-bottom: 72px;">{{"resources."+"p"|translate}}</p>
+                <div class="features-flex-image row d-flex justify-content-center align-items-center">
+                    <div class="col-10 m-5 col-lg-7">
+                        <img style="cursor: pointer" (click)="this.openLink.onNavigate('https://www.eventbrite.com/e/digital-hr-a-complete-employee-experience-tickets-84575111435?aff=ebdssbeac')" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2F%20CONFERENCE%20EVENTBRITE%20COVER.png?alt=media&token=c1091fc8-68b5-4fb2-a883-d1c908d3fd4d">
+                    </div>
+                    <div class="col-10 m-5 col-lg-3">
+                        <img style="cursor: pointer" [routerLink]="'/blogs'" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Febook.png?alt=media&token=86b9d2ce-f112-4dbc-b92b-f42df25d87f2">
+                    </div>
+                </div>
+                <div class="cta">
+                    <a (click)="this.openLink.onNavigate('https://www.eventbrite.com/e/digital-hr-a-complete-employee-experience-tickets-84575111435?aff=ebdssbeac')" class="btn resources"><span>{{'resources.'+'cta'|translate}}</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support" style="margin-bottom: 80px">
+        <div class="container">
+            <h2 class="big-title" >{{"support-h2"|translate}}</h2>
+            <div class="logo-support-flex row d-flex justify-content-center align-items-center justify-content-around">
+                <div class="support-logo" style="padding: 1.5rem; margin-bottom: 3%;">
+                <img
+                     src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo%2Fhr%20media%20logo.png?alt=media&token=3faa0fb7-f095-4858-8565-10f6a42a2884" alt="">
+                </div>
+                <div class="support-logo" style="margin-bottom: 3%">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo%2FHebronstar-logo.png?alt=media&token=3163e901-21c4-40b0-99f8-071e7e58cfbe" alt="">
+                </div>
+                <div class="support-logo" style="margin-top: 1%">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo%2Fstartupturkey.png?alt=media&token=2f4ed73d-f4ef-413e-ab1c-4a31bc21bcdb" alt="">
+                </div>
+                <div class="support-logo" >
+                    <img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo%2Fdnext-color.png?alt=media&token=6ecbbbee-07e3-4be8-9718-2c21cad42193" alt="">
+                </div>
+                <div class="support-logo" style="margin-bottom: 10%">
+                    <img  src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo%2Fshinhan.jpeg?alt=media&token=21c50e8d-2ebe-4178-b740-5ee858eddfa4" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="request-demo d-flex flex-column">
+        <h2 >
+            {{"demo."+"h2"|translate}}
+        </h2>
+        <p>
+            {{"demo."+"p"|translate}}
+        </p>
+        <div class="request-demo-cta">
+            <a class="request-button" (click)="this.displayForm=true" id="myBtn">
+                {{"demo."+"cta"|translate}}
+            </a>
+        </div>
+
+    </div>
+
+    <section class="contact-form" #end id="end">
+        <div [style.display]="displayForm ? 'block' : 'none'" class="modal custom-modal" data-backdrop="true" id="myModal" tabindex="-1" role="dialog"  aria-labelledby="myModalLabel">
+            <div class="modal-dialog">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h2 class="modal-title" style="color: rebeccapurple">{{"form-title."+"h2"|translate}}</h2>
+                    </div>
+                    <form  [formGroup]="this.contactService.form" (ngSubmit)="onSubmit()"  style="text-align: left">
+
+                        <div class="modal-body">
+<!--                            <input type="hidden" name="id" id="id" class="form-control" formControlName="id" >-->
+                            <p class="my-3">{{"form-title."+"contact"|translate}}<span style="color: red">*</span></p>
+                            <div class="row my-3">
+                                <div class="form-group col-6">
+                                    <input type="text" placeholder="{{'form-inputs.'+'first'|translate}}" name="firstName" id="firstName" class="form-control border-secondary" formControlName="firstName" >
+                                    <div *ngIf="submitting && !firstName.valid && firstName.dirty" class="error">
+                                        <div *ngIf="firstName.errors.required; else elseBlockName ">
+                                            {{'form-noti.'+'first.'+"require"|translate}}
+                                        </div>
+                                        <ng-template #elseBlockName>
+                                            {{'form-noti.'+'first.'+"valid"|translate}}
+                                        </ng-template>
+                                    </div>
+                                </div>
+                                <div class="form-group col-6">
+<!--                                <label for="lastName">Last Name</label>-->
+                                    <input type="text" placeholder="{{'form-inputs.'+'last'|translate}}" name="lastName" id="lastName" class="form-control border-secondary" formControlName="lastName" >
+                                    <div *ngIf="submitting && !lastName.valid && lastName.dirty" class="error">
+                                        <div *ngIf="lastName.errors.required; else elseBlockName ">
+                                            {{'form-noti.'+'last.'+"require"|translate}}
+                                        </div>
+                                        <ng-template #elseBlockName>
+                                            {{'form-noti.'+'last.'+"valid"|translate}}
+                                        </ng-template>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                            <div class="form-group col-12">
+                            <input type="text" name="email" placeholder="Email" id="email" class="form-control border-secondary" formControlName="email" required email>
+                            <div *ngIf="submitting && email.invalid && email.dirty" class="error">
+                                <div *ngIf="email.errors.required">
+                                    {{'form-noti.'+'email.'+"require"|translate}}
+                                </div>
+                                <div *ngIf="email.errors.email">
+                                    {{'form-noti.'+'email.'+"valid"|translate}}
+                                </div>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="row mb-3">
+
+                            <div class="form-group col-12">
+                                <input type="text" name="phone" id="phone" class="form-control border-secondary" placeholder="{{'form-inputs.'+'phone'|translate}}" formControlName="phone" >
+                                <div *ngIf="submitting && phone.invalid && phone.dirty" class="error">
+                                    <div *ngIf="phone.errors.required; else elseBlockPhone ">
+                                        {{'form-noti.'+'phone.'+"require"|translate}}
+                                    </div>
+                                    <ng-template #elseBlockPhone>
+                                        {{'form-noti.'+'phone.'+"valid"|translate}}
+                                    </ng-template>
+                                </div>
+                            </div>
+                            </div>
+                            <p class="my-3">{{"form-title."+"workplace"|translate}}<span style="color: red">*</span></p>
+                            <div class="row">
+                                <div class="form-group col-6">
+                                    <input type="text" placeholder="{{'form-inputs.'+'company'|translate}}" name="company" id="company" class="form-control border-secondary" formControlName="company" >
+                                    <div *ngIf="submitting && company.invalid && company.dirty" class="error">
+                                        <div *ngIf="company.invalid">
+                                            {{'form-noti.'+'company'|translate}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-6" for="position">
+                                    <input type="text" placeholder="{{'form-inputs.'+'position'|translate}}" name="position" id="position" class="form-control border-secondary" formControlName="position" >
+                                    <div *ngIf="submitting && position.invalid && position.dirty" class="error">
+                                        <div *ngIf="position.invalid">
+                                            {{'form-noti.'+'position'|translate}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="done">
+                                <div class="service-error" *ngIf="error && submitted;">
+                                    <h1>{{error}}</h1>
+                                    <h3>{{error}}</h3>
+                                </div>
+                                <div class="contact-message">
+                                    <div *ngIf="this.contactService.form.get('id').value else elseState" class="contact-success">
+                                        <!--                <h2 class="success">Success!</h2>-->
+                                        <h4>Thanks <div style="display:inline;font-weight: 600; font-size: 1.6rem">{{firstName.value}}</div>! We will contact you soon.</h4>
+                                        <button (click)="onReset()" class="btn btn-success">Done</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <ng-template #elseState>
+                                <div *ngIf="!sending else buttonLoad" class="row not-done">
+                                    <button [disabled]="!this.contactService.form.dirty" class="btn btn-success rectangle rectangle-purple form-button">{{'form-cta.'+'submit'|translate}}</button>
+                                </div>
+                                <ng-template #buttonLoad>
+                                    <div class="row not-done">
+                                    <button disabled="true" style="background-color: #6b6b6b" class="btn btn-success rectangle rectangle-purple form-button">{{'form-cta.'+'submitting'|translate}}</button>
+                                    </div>
+                                </ng-template>
+                                <div class="row not-done my-1 d-flex justify-content-center">
+                                    <button type="button" class="btn can" data-dismiss="modal" (click) = "this.displayForm=false">{{'form-cta.'+'cancel'|translate}}</button>
+                                </div>
+                            </ng-template>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer #contact>
+    <div class="footer-flex row d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-md-around" style="margin-bottom: 18px">
+        <div class="footer-item custom col-2">
+            <h2 class="footer-item-tittle">{{"footer-tittle."+"1"|translate}}</h2>
+            <a [routerLink]="'/'" (click)="scroll(solutions)">{{"footer-item-1."+"p1"|translate}}</a>
+            <a [routerLink]="'/'" (click)="scroll(features)">{{"footer-item-1."+"p2"|translate}}</a>
+            <a [routerLink]="'/'" (click)="scroll(customers)">{{"footer-item-1."+"p3"|translate}}</a>
+<!--            <a [routerLink]="'/pricing'">{{"footer-item-1."+"p4"|translate}}</a>-->
+        </div>
+        <div class="footer-item col-2">
+            <h2 class="footer-item-tittle hide-menu">{{"footer-tittle."+"2"|translate}}</h2>
+            <a [routerLink]="'/blogs'" class="hide-menu">{{"footer-item-2."+"p1"|translate}}</a>
+            <a [routerLink]="'/'" class="hide-menu" (click)="this.openLink.onNavigate('https://www.eventbrite.com/e/digital-hr-a-complete-employee-experience-tickets-84575111435?aff=ebdssbeac')">{{"footer-item-2."+"p2"|translate}}</a>
+            <div class="store" style="width: 109pt; padding: 0.75rem;">
+                <img class="app-store-ch-play" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fapp-store.png?alt=media&token=407596ef-c81e-4087-a6e6-d9058267385d" alt="" (click)="this.openLink.onNavigate('https://apps.apple.com/vn/app/upup-app/id1391118358')">
+            </div>
+            <div class="store" style="width: 109pt;">
+                <img class="app-store-ch-play" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Fgoogle-play.png?alt=media&token=a9dd2916-f4d1-42ad-a070-936f32d2574f" alt="" (click)="this.openLink.onNavigate('https://play.google.com/store/apps/details?id=com.upupapp.prod&hl=en')">
+            </div>
+        </div>
+        <div class="footer-item custom col-3">
+            <h2 class="footer-item-tittle">{{"footer-tittle."+"3"|translate}}</h2>
+            <a [routerLink]="'/'" (click)="this.displayForm=true;">{{"footer-item-3."+"p1"|translate}}</a>
+            <a [routerLink]="'/'" (click)="this.displayForm=true;">{{"footer-item-3."+"p2"|translate}}</a>
+        </div>
+        <div class="footer-item col-2">
+            <h2 class="footer-item-tittle">{{"footer-tittle."+"4"|translate}}</h2>
+            <!--                <img class="bottom-logo" src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Flogo-UpUpApp-bottom.png?alt=media&token=2fe01a64-94b5-4ffc-9be6-9cbf3221be45" alt="">-->
+            <!--                <p style="color: rebeccapurple; padding-left: 5px; fonts-size: 1.2rem">UPUP APP</p>-->
+            <a style="cursor: text">0929.089.969</a>
+            <a style="cursor: text">admin@upupapp.asia</a>
+
+            <br>
+            <h2 class="footer-item-follow">{{"footer-tittle."+"5"|translate}}</h2>
+
+            <div class="socials d-flex flex-row justify-content-start align-items-center">
+                <div class="social">
+                    <a class="linkin" href="https://ph.linkedin.com/company/up-up-app" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fsocial%20media%2Ficons8-linkedin-50.png?alt=media&token=9c295f24-ca68-44e9-975e-847ea07e6a03"></a>
+                </div>
+                <div class="social">
+                    <a class="facebook" href="https://web.facebook.com/upupappasia" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fsocial%20media%2Ficons8-facebook-old-50.png?alt=media&token=7b339948-f7d9-4f24-baf4-00556c025543"></a>
+                </div>
+                <div class="social">
+                    <a class="instagram" href="https://www.instagram.com/up_up_app" target="_blank"><img src="https://firebasestorage.googleapis.com/v0/b/upuptechnologies.appspot.com/o/assets%2Fimages%2Ficon%2Fsocial%20media%2Ficons8-instagram-50.png?alt=media&token=c5f0bac8-c253-4a5d-9a04-39a1374ef7cc"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom d-flex flex-column align-items-center flex-lg-row text-center px-md-5 row" style="padding-top: 18px">
+        <div class="translation-footer row mx-md-3">
+            <select class="select-css" style=" padding-bottom: 5px" #langSelectfooter (change)="this.dictionary.changeLang(langSelectfooter.value)">
+                <option style="" *ngFor="let lang of this.dictionary.translate.getLangs()" [value]="lang" [selected]="lang === this.dictionary.translate.currentLang">{{ lang==='VI'?("language."+"VI"|translate):"language."+"EN"|translate }}</option>
+            </select>
+        </div>
+        <div class="copy-right-text m-md-auto text-center" style="">
+            <p style="font-size: 12px">Copyright &copy; 2019, UpUp Technologies, inc. All rights reserved. Terms of Service | Privacy Policy</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-storage.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+

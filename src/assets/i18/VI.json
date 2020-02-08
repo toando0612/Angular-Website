@@ -1,0 +1,198 @@
+{
+  "nav": {"1": "Giải Pháp ", "2": "Tính Năng", "3":  "Khách Hàng","4":"Blog","5": "Liên Hệ", "cta": "Bắt Đầu" },
+  "hero":{
+    "h2":"Gắn kết nhân lực - ở khóa thành công",
+    "p": "Phương pháp tiếp cận mới trong việc gắn kết đội ngũ tạo thúc đẩy hiệu quả và năng suất công việc"},
+
+  "work-with-p": "Đã được tin tưởng và sử dụng bởi",
+  "employee-engagement-h2": "Cùng gặp gỡ UpUp App, một nền tảng thân thiện và hiện đại",
+  "employee-engagement-p": "UpUp App giúp việc quản lý trở nên dễ dàng, tạo ra sự ghi nhận, lôi cuốn và gắn kết đội ngũ tại nơi làm việc.",
+
+  "why-upupapp-h2": "UpUp App giúp bạn như thế nào",
+  "why-upupapp-item1" : {
+    "p1": "Thúc đẩy hiệu suất",
+    "p2":"Gắn kết nhân viên và tăng hiệu quả hoạt động qua hệ thống đánh giá ứng dụng điện tử hóa. Các quản lý và nhân viên có thể dễ dàng tập trung vào mục tiêu, theo dõi tiến độ, kết nối giữa mục tiêu cá nhân và tổ chức"
+  },
+  "why-upupapp-item2" : {
+    "p1": "Duy trì cá nhân xuất sắc",
+    "p2":"Với sự gắn kết, nhân viên sẽ hạnh phúc hơn, sẵn lòng ở lại và cống hiến cho tổ chức. UpUp App giúp bạn xây dựng một hệ thống ghi nhận và trao thưởng hiệu quả để nhân viên luôn cảm thấy được trân trọng với những nỗ lực của bản thân."
+  },
+  "why-upupapp-item3" : {
+    "p1": "Nâng cao văn hóa tổ chức",
+    "p2":"Văn hóa tổ chức lớn mạnh sẽ duy trì sự hài lòng của các đội ngũ, giữ vững vị trí của những cá nhân xuất sắc. UpUp App sẽ hỗ trợ xây dựng, đo lường và phát triển môi trường nơi nhân viên sẽ thực hiện công việc một cách tốt nhất."
+  },
+  "why-upupapp-item4" : {
+    "p1": "Dữ liệu thời gian thực",
+    "p2":"Nâng cấp trải nghiệm của nhân viên, thấu hiểu mong muốn mỗi cá nhân, quản lý đội ngũ tốt hơn với những quyết định dựa trên phân tích dữ liệu thực tế."
+  },
+
+  "our-solutions-h2" : "Giải pháp của chúng tôi",
+  "our-solution-item1": {
+    "p1": "GẮN KẾT",
+    "p2": "Chương trình gắn kết nhân lực",
+    "p3": "Tạo một văn hóa làm việc nơi quản lý có thể đưa mục tiêu rõ ràng, tạo động lực cho đội ngũ, theo dõi tiến trình hoạt động, nhận ra những cá nhân xuất sắc và nhân viên luôn cảm thấy được trân trọng."
+  },
+  "our-solution-item2": {
+    "p1": "TẠO ĐỘNG LỰC",
+    "p2": "Chương trình thúc đẩy kinh doanh",
+    "p3": "Dựa trên ứng dụng điện tử hóa, chúng tôi đem đến một phương thức mới để thúc đẩy hiệu quả hoạt động của nhân viên, tăng doanh số - lợi nhuận và vẫn duy trì được môi trường làm việc lý tưởng."
+  },
+  "our-solution-item3": {
+    "p1": "TRAO THƯỞNG",
+    "p2": "Ghi nhận và Trao thưởng",
+    "p3": "Tạo ra văn hóa ghi nhận và một thị trường giải thưởng trực tuyến nơi bạn có thể tùy chỉnh những phần thưởng của mình."
+  },
+  "solution-learn-more": "Tìm hiểu thêm",
+
+  "main-features": {
+    "h2": "Những tính năng chính của UpUp App",
+    "p": "Gắn kết, ghi nhận và trao thưởng - sự kết hợp của tất cả"
+  },
+  "feature1": "Quản lý hiệu suất",
+  "feature2": "Hệ thống newsfeed",
+  "feature3": "Tin nhắn thoại",
+  "feature4": "Quản lý nhiệm vụ",
+  "feature5": "Điểm thưởng và bảng xếp hạng",
+  "feature6": "Huy hiệu điện tử",
+  "feature7": "Ghi nhận và trao thưởng",
+  "feature8": "Phân tích và báo cáo dữ liệu",
+
+  "product-1": {
+    "h2": "Thiết lập mục tiêu và OKRs",
+    "p1": "Nhân viên luôn mong muốn biết được những đóng góp của mình dành cho tổ chức.",
+    "p2": "Sắp xếp các mục tiêu và cải thiện năng suất của nhóm bằng OKRs. UpUp App giúp người quản lý truyền đạt các mục tiêu rõ ràng và kết nối với các ưu tiên hàng đầu của tổ chức đồng thời cung cấp cho nhân viên các công cụ để theo dõi và chia sẻ tiến trình của họ trong thời gian thực để giúp mọi người làm việc hiệu quả và có trách nhiệm"
+  },
+  "product-2": {
+    "h2": "Giao tiếp và Phản hồi",
+    "p1": "Các nền tảng giao tiếp phổ biến để tương tác với nhân viên - chẳng hạn như Messenger, Whatsapp hoặc email - chúng không được thiết kế cho doanh nghiệp.",
+    "p2": "UpUp App giúp nhân viên của bạn có thể chia sẻ những khoảnh khắc và cảm nghĩ trên newsfeed. Kết nối mọi lúc mọi nơi."
+  },
+  "product-3": {
+    "h2": "Gamification - Game hóa",
+    "p": "Các tính năng game-hóa của chúng tôi làm cho UpUp App trở nên thú vị khi sử dụng tại nơi làm việc và giúp tạo ra trải nghiệm hấp dẫn của nhân viên, thúc đẩy kết quả kinh doanh. Nền tảng của chúng tôi giúp nhân viên đạt được mục tiêu của họ, cải thiện động lực, sự gắn kết, bảng xếp hạng dựa trên thời gian thực, các thách thức trong ứng dụng và hiệu ứng ghi nhận."
+  },
+  "product-4": {
+    "h2": "Ghi nhận và Trao thưởng",
+    "p1": "Nhân viên có xu hướng mong muốn được ghi nhận nỗ lực và tự chọn những phần thưởng. UpUp App cung cấp công cụ giúp các nhà quản lý có thể tạo ra tình huống khen thưởng hài hước, hiệu quả và giúp cho nhân viên của bạn tỏa sáng tại nơi làm việc.",
+    "p2": "Với UpUpApp, nhân viên của bạn sẽ thu thập điểm thưởng và quy đổi tại Upmarket. Đây hoàn toàn là một quy trình tự động và giảm thiểu áp lực lên bộ phận nhân sự."
+  },
+  "product-5": {
+    "h2": "Phân tích dữ liệu nhân sự",
+    "p1": "Một trong những thách thức lớn nhất của các tổ chức là truy cập dữ liệu nhân viên chính xác trên thời gian thực.",
+    "p2": "UpUp App giúp các tổ chức đưa ra những quyết định chính xác, theo dõi ROI từ chương trình bằng việc sử dụng dữ liệu đã được phân tích. Chúng tôi cũng cung cập một bảng xếp hạng thực tế để các nhà quản lý kiểm soát tiến trình và lên kế hoạch hoạt động"
+  },
+
+  "coolthings-h2": "Chức năng và Hỗ trợ khác",
+  "cool1": "Có sẵn trên Android, IOS và Web app",
+  "cool2": "Hỗ trợ api",
+  "cool3": "Tùy chỉnh chức năng",
+  "cool4": "Quản lý tài khoản chuyên dụng",
+  "cool5": "Báo cáo hàng tháng",
+  "cool6": "Hỗ trợ tư vấn kĩ thuật",
+
+  "safe-h2": "An toàn và bảo mật",
+  "safe-p1": "UPUP APP sẽ lưu trữ và xử lý dữ iệu khách hàng theo các tiêu chuẩn bảo mật của ngành.",
+  "safe-p2": "Dữ liệu được lưu trữ trong Google Cloud Firestore for Firebase. Các dịch vụ Firebase được mã hóa trong quá trình sử dụng HTTPS và dữ liệu được mã hóa ở phần còn lại. Cloud cũng sẵn sàng GDPR cũng như được chứng nhận bởi ISO 27001, ISO 27017, 17018 và SOC 1, SOC 2, SOC. Dữ liệu chỉ có thể truy cập được qua các kênh SSL / TLS được mã hóa và mọi yêu cầu phải bao gồm mã thông báo xác thực giới hạn thời gian được tạo thông qua đăng nhập của con người hoặc bí mật dựa trên khóa riêng thông qua hệ thống xác thực của Google.",
+
+  "testimonials-h2": "Testimonials",
+  "testi1": {
+    "title": "Lời cảm ơn từ Quán Ụt Ụt đến UpUp App sau quá trình sử dụng",
+    "feedback": "\"Chúng tôi đã sử dụng UpUp App với mong muốn quản lý nhân viên tốt hơn. Là một giám đốc hân sự, nền tảng này giúp tôi có thể theo dõi hiệu quả, tiến trình công việc và trao thưởng mọi lúc mọi nơi.\"",
+    "author": "- Chị Linh - Giám đốc Nhân sự Quán Ụt Ụt"
+  },
+  "testi2": {
+    "title": "Những lãnh đạo chia sẻ về sự quan trọng trong gắn kết và trao thưởng nhân viên",
+    "feedback": "",
+    "author": "UpUp App"
+  },
+  "testi3": {
+    "title": "Gắn kết nhân lực là gì?",
+    "feedback": "",
+    "author": "-Ms. Mila Pacual, đối tác Nhân sự của IBM"
+  },
+
+  "resources": {
+    "h2": "Tài liệu và sự kiện nổi bật",
+    "p": "Những hiểu biết sâu sắc về gắn kết nhân viên cho bước nhảy vọt của tổ chức",
+    "cta":"Xem tất cả"
+  },
+
+  "support-h2": "Được hỗ trợ bởi",
+
+  "demo": {
+    "h2": "THỰC HIỆN BƯỚC NHẢY CỦA BẠN",
+    "p": "Trải nghiệm UpUp App về gắn kết - ghi nhận - trao thưởng",
+    "cta": "Đăng kí demo"
+  },
+
+  "form-title": {
+    "h2": "Đăng kí demo",
+    "contact": "Thông tin của bạn",
+    "workplace": "Thông tin tổ chức"
+  },
+  "form-inputs": {
+    "first": "Tên",
+    "last": "Họ",
+    "phone": "Số điện thoại liên lạc",
+    "company": "Tên Công Ty",
+    "position": "Chức vụ"
+  },
+  "form-noti": {
+    "first": {
+      "valid": "Tên không hợp lệ",
+      "require": "Vui lòng nhập tên"
+    },
+    "last": {
+      "valid": "Họ không hợp lệ",
+      "require": "Vui lòng nhập họ"
+    },
+    "email": {
+      "valid": "Email không hợp lệ",
+      "require": "Vui lòng nhập email"
+    },
+    "phone": {
+      "valid": "Số điện thoại không hợp lệ",
+      "require": "Vui lòng nhập số điện thoại"
+    },
+    "company": "Vui lòng nhập tên công ty",
+    "position": "Vui lòng nhập chức vụ của bạn"
+  },
+
+  "form-cta": {
+    "submit": "Gửi",
+    "cancel": "Đóng",
+    "submitting": "Đang gửi"
+  },
+
+
+
+  "footer-tittle": {
+    "1": "UPUP APP",
+    "2": "NỘI DUNG KHÁC",
+    "3": "TRỞ THÀNH ĐỐI TÁC",
+    "4": "ĐƯỜNG DÂY NÓNG",
+    "5": "THEO DÕI"
+  },
+  "footer-item-1": {
+    "p1":"Giải pháp",
+    "p2": "Tính năng",
+    "p3": "Khách hàng",
+    "p4": "Chi phí"
+  },
+  "footer-item-2": {
+    "p1":"Blog",
+    "p2": "Sự kiện"
+  },
+  "footer-item-3": {
+    "p1":"Trở thành nhà cung cấp",
+    "p2": "Trở thành nhà bán lẻ"
+  },
+  "language":{
+    "EN": "Tiếng Anh ",
+    "VI": "Tiếng Việt"
+  },
+  "category": "Khám phá blog",
+  "blog-home": {"h2": "Blog Của Chúng Tôi","p": "Cập nhập những xu hướng mới nhất trong Gắn kết nhân sự để tạo ra một môi trường lý tưởng cho toàn bộ tổ chức"},
+  "explan": "UpUp App là một giải pháp di động đầu tiên kết hợp hệ thống quản lý cùng ứng dụng điện tử hoá để giúp tăng hiệu suất và niềm vui trong công việc.",
+  "blog-contact": {"h2": "Kết Nối Cùng Chúng Tôi","p": "Tìm hiểu thêm về Gắn kết nhân sự, Ghi nhận và Trao thưởng để tăng hiệu suất làm việc và sự hài lòng cua nhân viên","cta": "Đăng Ký","holder": "Email của bạn"}
+}

@@ -1,0 +1,39 @@
+p, li{
+  font-family: 'Muli Regular';
+  color: rgb(35,44,48);
+  font-size: 18px;
+  line-height: 27px;
+}
+.banner{
+}
+.blog-image{
+  border-radius: 22px;
+  height: 400px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.inner-wrapper{
+  margin-top: 120px;
+}
+.big-title{
+  font-family: 'Muli Bold';
+  font-weight: 900;
+  font-size: 30px;
+  color: #005493;
+  line-height: 42px;
+}
+.medium-title{
+  font-family: 'Muli Regular';
+  font-weight: 700;
+  font-size: 24px;
+  color: #005493;
+  line-height: 30px;
+}
+.bold-text{
+  font-size: 17pt;
+  font-weight: bold;
+  color: black;
+}
+.ref{
+  font-style: italic;
+}

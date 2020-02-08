@@ -1,0 +1,182 @@
+{
+  "nav": {"1": "Solutions", "2": "Features", "3":  "Customers","4":"Blog","5": "Contact Us", "cta": "Get Started" },
+  "hero":{"h2":"Engage employees, Unlock business performance", "p": "Delivering a new approach in engaging employees to boost teams productivity and drive business results"},
+  "work-with-p": "Trusted and used by awesome teams",
+  "employee-engagement-h2": "Meet UpUp App, the employee engagement platform your team will love",
+  "employee-engagement-p": "UpUp App makes performance management simple and recognition fun to build engaged teams and happy workplaces.",
+  "why-upupapp-h2": "How UpUp App can help you",
+  "why-upupapp-item1" : {
+    "p1": "Boost performance",
+    "p2":"Engage employees and drive performance with our gamified goal-setting system that allows managers and employees to focus on what matters, track progress and align individuals and company’s goals to drive business results"
+  },
+  "why-upupapp-item2" : {
+    "p1": "Retain your top talents",
+    "p2":"Engaged employees are happier, willing to stay longer in the company and invest extra effort to grow the business. UpUp App helps you build an effective recognition and reward program to make employees feel appreciated for their contribution."
+  },
+  "why-upupapp-item3" : {
+    "p1": "Enhance your workplace culture",
+    "p2":"A strong company culture keeps employees happy and helps retain top talents. Our platform allows leaders to build, measure and develop a successful company culture to create an environment where people can do their best work."
+  },
+  "why-upupapp-item4" : {
+    "p1": "Get real-time data on employee",
+    "p2":"Improve employee retention, understand what employees want, manage employees better with data-driven decision making. Our platform helps turns in-app insights into actions to create the perfect employee experience."
+  },
+  "our-solutions-h2" : "Our Solutions",
+  "our-solution-item1": {
+    "p1": "ENGAGE",
+    "p2": "Employee Engagement Program",
+    "p3": "Create an engaged company culture where managers can communicate clear expectations, motivate teams, track progress, recognize top performers and where employees feel appreciated."
+  },
+  "our-solution-item2": {
+    "p1": "MOTIVATE",
+    "p2": "Sales Booster Program",
+    "p3": "Based on our gamification approach, we deliver a new way to motivate your employees to generate more sales and revenues while maintaining a productive and engaging work environment."
+  },
+  "our-solution-item3": {
+    "p1": "REWARD",
+    "p2": "Reward & Recognition Program",
+    "p3": "Create a culture of recognition and access to a marketplace of local digital incentives and pre-negotiated corporate rewards which can be customized to your needs."
+  },
+  "solution-learn-more": "learn more",
+
+  "main-features": {
+    "h2": "UpUp App main features",
+    "p": "Engage, recognize and reward your employees - all in one place"
+  },
+  "feature1": "Performance Management",
+  "feature2": "Newsfeed System",
+  "feature3": "Messaging Functions",
+  "feature4": "Task management",
+  "feature5": "Leaderboard & Points",
+  "feature6": "Digital badges",
+  "feature7": "Rewards & Recognition",
+  "feature8": "Report & Analytics",
+
+  "product-1": {
+    "h2": "Goals setting and OKRs",
+    "p1": "Employees want to know how they are doing and measure their contribution to the company.",
+    "p2": "Organize goals and improve team productivity using OKRs.\nUpUp App helps managers communicate clear and structured goals that are aligned with the overall organization’s top priorities while giving employees the tools to track and share their progress in real-time to keep everyone productive and accountable"
+  },
+  "product-2": {
+    "h2": "Communication and Feedback",
+    "p1": "Popular communication platforms to interact with employees - such as Fb messenger, Whatsapp or emails - are not designed for business.",
+    "p2": "UpUp App helps you give your employees a voice to let them share moments and experiences on the newsfeed. Reach every employees in real-time and anywhere to develop a more informed workforce and keep conversations organized with in-app messages."
+  },
+  "product-3": {
+    "h2": "Gamification",
+    "p": "Our gamification features make UpUp App fun to use at work and help create a compelling employee work experience that drives business outcomes. Our gamified employee engagement platform helps employees achieve their goals and objectives, improve motivation and engagement with real-time progress, leaderboard, in-app challenges and recognition."
+  },
+  "product-4": {
+    "h2": "Rewards and Recognition",
+    "p1": "Employees expect to be recognized more often and choose their rewards. UpUp App provides the tools for managers to make recognition fun, effective and real-time to make your people shine at work.",
+    "p2": "With UpUp App, employees collect points that they can redeem for rewards in our Upmarket. We automate the reward process and help HR reduces admin work."
+  },
+  "product-5": {
+    "h2": "Data & HR analytics",
+    "p1": "One of the biggest challenges for companies is to access accurate and real-time data on employees.",
+    "p2": "UpUp App helps companies make better decisions using Data and HR analytics to track the ROI of employee engagement programs. We help managers to access actionable insights they need to develop their people and improve business results. We also provide a real-time dashboard to identify issues and set up actions."
+  },
+  "coolthings-h2": "Other Functions and Support",
+  "cool1": "Available on Android, IOS and Web app",
+  "cool2": "Developer API support",
+  "cool3": "Customization & Configurations available",
+  "cool4": "Dedicated account managers",
+  "cool5": "Monthly reports and coaching",
+  "cool6": "Consulting & Tech support",
+  "safe-h2": "Safe and Secured",
+  "safe-p1": "UPUP APP will store and process Customer Data in a manner consistent with industry security standards.",
+  "safe-p2": "Data is hosted in Google’s Cloud Firestore for Firebase. Firebase services are encrypted in transit using HTTPS and data is encrypted at rest. Cloud is also GDPR Ready as well as certified by ISO 27001, ISO 27017, 17018 and SOC 1, SOC 2, SOC. Data is only accessible over encrypted SSL/TLS channels, and every request must include a time-limited authentication token generated via human login or private key-based secrets through Google authentication system.",
+  "testimonials-h2": "Testimonials",
+  "testi1": {
+    "title": "Quan utut improved engagement and retention thanks to UpUp App",
+    "feedback": "\"We have applied UpUp App to better manage our employees. As an HR director, it allows me to track performance, progress and reward my employees in real-time\"",
+    "author": "- HR Director Quan UtUt - Ms. Linh"
+  },
+  "testi2": {
+    "title": "Business leaders sharing about the importance of engaging and rewarding employees in the workplace",
+    "feedback": "",
+    "author": "UpUp App"
+  },
+  "testi3": {
+    "title": "What are engaged Employees",
+    "feedback": "",
+    "author": "- Ms. Mila Pacual, IBM HR partner"
+  },
+  "resources": {
+    "h2": "Featured resources and events",
+    "p": "Insights on employee engagement for fast growing companies",
+    "cta": "More Resources"
+  },
+  "support-h2": "Supported by",
+  "demo": {
+    "h2": "GROW YOUR BUSINESS",
+    "p": "See how UpUp App can help you engage, recognize and reward your employees",
+    "cta": "Request A Demo"
+  },
+  "form-title": {
+    "h2": "Request a demo",
+    "contact": "Contact information",
+    "workplace": "Workplace information"
+  },
+  "form-inputs": {
+    "first": "First Name",
+    "last": "Last Name",
+    "phone": "Phone",
+    "company": "Company Name",
+    "position": "Your position"
+  },
+  "form-noti": {
+    "first": {
+      "valid": "Please input valid first name.",
+      "require": "First name is required."
+    },
+    "last": {
+      "valid": "Please input valid last name.",
+      "require": "Last name is required."
+    },
+    "email": {
+      "valid": "Invalid email address",
+      "require": "Email is required"
+    },
+    "phone": {
+      "valid": "Please input valid phone number.",
+      "require": "Phone is required."
+    },
+    "company": "Company is required",
+    "position": "Position is required"
+  },
+  "form-cta": {
+    "submit": "Send",
+    "cancel": "Close",
+    "submitting": "Sending"
+  },
+  "footer-tittle": {
+    "1": "UPUP APP",
+    "2": "RESOURCES",
+    "3": "BECOME A PARTNER",
+    "4": "CONTACT",
+    "5": "FOLLOW US"
+  },
+  "footer-item-1": {
+    "p1":"Solutions",
+    "p2": "Features",
+    "p3": "Customers",
+    "p4": "Pricing"
+  },
+  "footer-item-2": {
+    "p1":"Blog",
+    "p2": "Event"
+  },
+  "footer-item-3": {
+    "p1":"Become a merchant partner",
+    "p2": "Become a reseller partner"
+  },
+  "language":{
+    "EN": "English",
+    "VI": "Vietnamese"
+  },
+  "category": "Explore our blog",
+  "blog-home": {"h2": "Our Blog","p": "Get the latest insights on employee engagement to empower your talents and create a better work environment"},
+  "explan": "UpUp App is a mobile first solution that combines a goal management system with gamification to help businesses improve productivity and make work fun.",
+  "blog-contact": {"h2": "Get In Touch","p": "Get more tips about engaging employees, giving rewards and recognition to make employees more productive and happier","cta": "Subscribe","holder": "Your email address"}
+}
